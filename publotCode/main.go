@@ -70,43 +70,4 @@ func handler(ctx context.Context, request events.APIGatewayProxyRequest) error {
 
 func main() {
 	lambda.Start(handler)
-	/*request := `{
-	  	"command":"*K2CS,MW,123456789123456,*,W1#\n"
-	  }`
-
-	  cmdReq := PayloadReq{}
-
-	  err := json.Unmarshal([]byte(request), &cmdReq)
-	  if err != nil {
-	  	fmt.Println(err)
-	  }
-
-	  cfg, err := config.LoadDefaultConfig(context.TODO())
-	  if err != nil {
-	  	fmt.Println(err)
-	  }
-
-	  svc := iotdataplane.NewFromConfig(cfg)
-
-	  pub := PubInput{
-	  	Payload: []byte(cmdReq.Command),
-	  	Qos:     1,
-	  	Retain:  true,
-	  	Topic:   "iot/test/pub",
-	  }
-
-	  input := iotdataplane.PublishInput{
-	  	Payload: pub.Payload,
-	  	Qos:     pub.Qos,
-	  	Retain:  pub.Retain,
-	  	Topic:   &pub.Topic,
-	  }
-
-	  output, err := svc.Publish(context.TODO(), &input)
-	  if err != nil {
-	  	fmt.Println(err)
-	  }
-
-	  fmt.Println("output : ", output)
-	*/
 }
